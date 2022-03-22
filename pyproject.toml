@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mikrotik_Smartsheet_dumper"
+version = "0.1.0"
+description = "Simple program to take a Mikrotik firewall and dump its contents to a smartsheet"
+authors = ["Angelo Poggi <angelo.poggi@opti9tech.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^0.19.2"
+smartsheet-python-sdk = "^2.105.1"
+RouterOS-api = "^0.17.0"
+click = "^8.0.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mikrotiksmartsheet = 'src.cli:cli'
